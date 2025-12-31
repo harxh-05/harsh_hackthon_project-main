@@ -1,0 +1,68 @@
+# Query: farmAi
+# Flags: WordMatch
+# ContextLines: 1
+
+14 results - 9 files
+
+PROJECT_FEATURES_SUMMARY.md:
+  1: # AgriFarmAI - Smart Farming Platform Features Summary
+  2  
+
+README.md:
+  1: # AgriFarmAI - AI-Powered Smart Farming Platform
+  2  
+
+  6  
+  7: AgriFarmAI is a modern web application that leverages artificial intelligence to provide farmers with actionable insights across four core modules:
+  8  - **Soil Analysis**: AI-powered soil health assessment with NPK analysis
+
+scripts\build-secure.js:
+   3  /**
+   4:  * Secure build script for AgriFarmAI Crop Recommendation System
+   5   */
+
+  14  
+  15: console.log('🔒 Starting secure build process for AgriFarmAI...');
+  16  
+
+  36    // Run the build
+  37:   console.log('🏗️  Building AgriFarmAI application...');
+  38    execSync('npm run build', { stdio: 'inherit', cwd: projectRoot });
+
+src\components\FarmingTool.jsx:
+  139        <div className="relative z-10 py-8 text-center text-gray-500 text-sm">
+  140:         <p>© 2024 AgriFarmAI. All Rights Reserved.</p>
+  141        </div>
+
+src\pages\About.jsx:
+   40              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600 drop-shadow-lg">
+   41:               ABOUT <br /> AgriFARMAI
+   42              </h1>
+
+  150        <footer className="relative z-10 py-8 text-center text-gray-500 text-sm">
+  151:         <p>© 2024 AgriFarmAI. All Rights Reserved.</p>
+  152        </footer>
+
+src\pages\AIAnalytics.jsx:
+  156        <div className="relative z-10 py-8 text-center text-gray-500 text-sm">
+  157:         <p>© 2024 AgriFarmAI. All Rights Reserved.</p>
+  158        </div>
+
+src\pages\Analysis.jsx:
+  212        <div className="relative z-10 py-8 text-center text-gray-500 text-sm">
+  213:         <p>© 2024 AgriFarmAI. All Rights Reserved.</p>
+  214        </div>
+
+src\pages\Contact.jsx:
+  117                title="Email Us"
+  118:               content="support@Agrifarmaiai.com"
+  119              />
+
+  205        <div className="relative z-10 py-8 text-center text-gray-500 text-sm">
+  206:         <p>© 2024 AgriFarmAI. All Rights Reserved.</p>
+  207        </div>
+
+src\pages\Insights.jsx:
+  203        <div className="relative z-10 py-8 text-center text-gray-500 text-sm">
+  204:         <p>© 2025 AgriFarmAI. All Rights Reserved.</p>
+  205        </div>

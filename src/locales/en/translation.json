@@ -1,0 +1,324 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "analysis": "Analysis",
+    "insights": "Insights",
+    "ai_analytics": "AI Analytics",
+    "contact": "Contact"
+  },
+  "common": {
+    "back_home": "Back to Home",
+    "back_dashboard": "Back to Dashboard",
+    "back_farming_tool": "Back to Farming Tool",
+    "send_message": "Send Message",
+    "upload_report": "Upload Report",
+    "processing": "Processing...",
+    "voice_input": "Voice Input",
+    "stop_voice": "Stop Voice",
+    "analyzing": "Analyzing...",
+    "analyze": "Analyze",
+    "logout": "Logout",
+    "launch": "Launch",
+    "recent_readings": "Recent Readings",
+    "camera_scan": "Camera Scan",
+    "analyze_data": "Analyze Data",
+    "listening": "Listening...",
+    "listening_prompt": "Listening... Speak now",
+    "document_uploaded": "Document Uploaded:",
+    "processing_document": "AI Processing Document...",
+    "extracting_field_data": "Extracting field data",
+    "select_gender": "Select Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "select_duration": "Select duration",
+    "select_severity": "Select severity"
+  },
+  "hero": {
+    "title1": "SMART FARMING",
+    "title2": "SOLUTIONS",
+    "tagline": "Advanced AI solutions for agriculture and market intelligence - revolutionizing farming and medical diagnosis with cutting-edge technology.",
+    "cta_farming_ai": "Farming AI",
+    "cta_learn_more": "Learn More"
+  },
+  "features": {
+    "crop_disease": "Crop Disease",
+    "detection": "Detection",
+    "ai_powered": "AI-Powered",
+    "insights": "Insights",
+    "yield": "Yield",
+    "optimization": "Optimization",
+    "smart": "Smart",
+    "automation": "Automation"
+  },
+  "weather": {
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "precipitation": "Precipitation",
+    "yield": "Yield"
+  },
+  "pages": {
+    "about": {
+      "title1": "ABOUT",
+      "title2": "AgriFARMAI",
+      "subtitle": "AI-powered mobile portal for farmers' disease diagnosis and reporting, contributing to SDG 2: Zero Hunger through enhanced agricultural productivity and food security.",
+      "expected_outcomes": "Expected Outcomes & SDG 2 Impact",
+      "disease_management": "Disease Management",
+      "food_security_impact": "Food Security Impact",
+      "ai_integration": "AI Integration & Community Impact",
+      "ai_technology": "AI Technology",
+      "community_benefits": "Community Benefits"
+    },
+    "ai_analytics": {
+      "title1": "AI",
+      "title2": "ANALYTICS",
+      "subtitle": "Advanced machine learning algorithms powering intelligent farming decisions.",
+      "capabilities": "AI Capabilities"
+    },
+    "analysis": {
+      "title1": "FARM",
+      "title2": "ANALYSIS",
+      "subtitle": "Comprehensive soil, crop, and environmental analysis for optimal farming decisions.",
+      "actionable_insights": "Actionable Insights"
+    },
+    "contact": {
+      "title1": "GET IN",
+      "title2": "TOUCH",
+      "subtitle": "Ready to revolutionize your farming? Contact our team of experts today.",
+      "our_location": "Our Location",
+      "email_us": "Email Us",
+      "call_us": "Call Us",
+      "send_us_message": "Send us a Message",
+      "full_name": "Full Name",
+      "email_address": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "placeholders": {
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "message": "Tell us how we can help you..."
+      }
+    },
+    "crop_health": {
+      "title1": "CROP",
+      "title2": "HEALTH",
+      "subtitle": "AI-powered crop disease detection and health monitoring system.",
+      "assessment": "Crop Health Assessment",
+      "fields": {
+        "crop_type": "Crop Type",
+        "variety": "Crop Variety",
+        "planting_date": "Planting Date",
+        "growth_stage": "Growth Stage",
+        "field_size": "Field Size (acres)",
+        "irrigation_method": "Irrigation Method",
+        "fertilizer": "Fertilizer Used",
+        "pesticide": "Pesticide Applied",
+        "location": "Location",
+        "symptoms": "Observed Symptoms",
+        "weather": "Weather Conditions",
+        "ph_crop_type": "e.g., Wheat, Rice, Tomato",
+        "ph_variety": "e.g., Basmati, IR64, Cherry",
+        "ph_field_size": "5",
+        "ph_location": "City, State",
+        "ph_symptoms": "Describe symptoms...",
+        "ph_weather": "Rainfall, temperature...",
+        "select_stage": "Select Stage",
+        "select_method": "Select Method"
+      },
+      "buttons": {
+        "analyze": "Analyze Data"
+      },
+      "cards": {
+        "ai_diagnosis": "AI Crop Diagnosis",
+        "crop_status": "Crop Status",
+        "health_score": "Health Score",
+        "growth_stage": "Growth Stage",
+        "yield_prediction": "Yield Prediction",
+        "expected_yield": "Expected Yield:",
+        "quality": "Quality:",
+        "factors": "Factors:",
+        "detected_diseases": "Detected Diseases",
+        "symptoms": "Symptoms:",
+        "treatment": "Treatment:",
+        "cost": "Cost:",
+        "nutrition_deficiencies": "Nutrition Deficiencies",
+        "solution": "Solution:",
+        "dosage": "Dosage:",
+        "fertilizer_recommendations": "Fertilizer Recommendations",
+        "purpose": "Purpose",
+        "quantity": "Quantity:",
+        "timing": "Timing:",
+        "action_plan": "Action Plan",
+        "immediate_actions": "Immediate Actions",
+        "weekly_actions": "Weekly Actions",
+        "monthly_actions": "Monthly Actions",
+        "cost_benefit": "Cost-Benefit Analysis",
+        "total_care_cost": "Total Care Cost",
+        "expected_revenue": "Expected Revenue",
+        "profit_margin": "Profit Margin"
+      }
+    },
+    "insights": {
+      "title1": "SMART",
+      "title2": "INSIGHTS",
+      "subtitle": "Actionable intelligence and market insights to maximize your farming success.",
+      "active_alerts": "Active Alerts",
+      "market_intelligence": "Market Intelligence",
+      "ai_recommendations": "AI Recommendations",
+      "investment_returns": "Investment Returns",
+      "this_week": "This Week",
+      "next_month": "Next Month"
+    },
+    "login": {
+      "back_home": "Back to Home",
+      "welcome_back": "Welcome Back",
+      "join": "Join MedicalAI",
+      "access_dashboard": "Access your medical AI dashboard",
+      "create_account_subtitle": "Create your medical professional account",
+      "sign_in": "Sign In",
+      "create_account": "Create Account",
+      "switch_to_signup": "Don't have an account? Sign up",
+      "switch_to_login": "Already have an account? Sign in",
+      "demo_mode": "Demo Mode:",
+      "demo_text": "Use any email and password to access the system",
+      "full_name": "Full Name",
+      "email": "Email Address",
+      "password": "Password"
+    },
+    "medical_analytics": {
+      "title1": "MEDICAL",
+      "title2": "ANALYTICS",
+      "subtitle": "Advanced health analytics and population insights for data-driven medical decisions.",
+      "back_dashboard": "Back to Dashboard"
+    },
+    "medical_dashboard": {
+      "title1": "MEDICAL AI",
+      "title2": "DASHBOARD",
+      "subtitle": "Advanced AI-powered medical analysis tools for healthcare professionals.",
+      "logout": "Logout",
+      "launch": "Launch"
+    },
+    "medical_diagnosis": {
+      "title1": "AI",
+      "title2": "DIAGNOSIS",
+      "subtitle": "Advanced symptom analysis with comprehensive medical insights and treatment recommendations.",
+      "symptom_analysis": "Symptom Analysis",
+      "analyze_symptoms": "Analyze Symptoms",
+      "fields": {
+        "age": "Age",
+        "gender": "Gender",
+        "describe_symptoms": "Describe Your Symptoms",
+        "question_feeling": "How are you feeling?",
+        "pain_description": "Pain Description",
+        "pain_location": "Location and Type of Pain",
+        "additional_symptoms": "Additional Symptoms",
+        "duration": "Duration",
+        "severity": "Severity",
+        "medical_history": "Medical History (Optional)",
+        "past_diseases": "Past diseases/surgeries",
+        "known_allergies": "Known allergies",
+        "family_history": "Family medical history",
+        "ph_pain_desc": "Sharp, dull, throbbing...",
+        "ph_pain_loc": "Head, chest, abdomen...",
+        "ph_symptoms": "Describe your symptoms in detail..."
+      },
+      "symptoms": {
+        "fever_chills": "Fever/Chills",
+        "fatigue": "Fatigue"
+      }
+    },
+    "medical_predictor": {
+      "title1": "HEALTH",
+      "title2": "PREDICTOR",
+      "subtitle": "AI-powered health outcome predictions and comprehensive risk assessment for proactive healthcare.",
+      "patient_information": "Patient Information",
+      "fields": {
+        "age": "Age",
+        "gender": "Gender",
+        "medical_history": "Medical History",
+        "symptoms": "Current Symptoms",
+        "lifestyle": "Lifestyle",
+        "family_history": "Family History"
+      }
+    },
+    "medical_vitals": {
+      "title1": "VITALS",
+      "title2": "MONITOR",
+      "subtitle": "Real-time vital signs monitoring with AI-powered analysis and health insights.",
+      "enter_vital_signs": "Enter Vital Signs",
+      "ai_analysis": "AI Analysis",
+      "enter_vitals_cta": "Enter vitals to get AI analysis",
+      "analyze_vitals": "Analyze Vitals",
+      "fields": {
+        "blood_pressure": "Blood Pressure",
+        "heart_rate": "Heart Rate (bpm)",
+        "temperature": "Temperature (°F)",
+        "oxygen_saturation": "Oxygen Saturation (%)",
+        "respiratory_rate": "Respiratory Rate (breaths/min)"
+      }
+    },
+    "monitoring": {
+      "title1": "IOT",
+      "title2": "MONITORING",
+      "subtitle": "Real-time sensor data analysis for smart irrigation and farm optimization.",
+      "iot_sensor_data": "IoT Sensor Data",
+      "fields": {
+        "soil_moisture": "Soil Moisture (%)",
+        "air_temperature": "Air Temperature (°C)",
+        "humidity": "Humidity (%)",
+        "light_intensity": "Light Intensity (lux)",
+        "rainfall": "Recent Rainfall (mm)"
+      },
+      "buttons": {
+        "analyze": "Analyze Monitoring"
+      }
+    },
+    "soil_analysis": {
+      "title1": "SOIL",
+      "title2": "ANALYSIS",
+      "subtitle": "AI-powered soil health assessment with comprehensive nutrient analysis.",
+      "soil_testing_data": "Soil Testing Data"
+    },
+    "farming_tool": {
+      "title1": "AI FARMING",
+      "title2": "MODULES",
+      "subtitle": "Choose your AI-powered farming tool to optimize productivity and sustainability.",
+      "our_contribution": "Our Contribution",
+      "modules": {
+        "crop": {
+          "title": "Crop Health",
+          "desc": "Disease detection, pest identification, and treatment recommendations"
+        },
+        "soil": {
+          "title": "Soil Analysis",
+          "desc": "AI-powered soil health assessment with NPK analysis and crop recommendations"
+        },
+        "monitoring": {
+          "title": "IoT Monitoring",
+          "desc": "Real-time sensor data analysis and irrigation optimization"
+        },
+        "market": {
+          "title": "Market Intelligence",
+          "desc": "Market analysis, price trends, and profitability insights"
+        }
+      },
+      "card": {
+        "status_label": "Status",
+        "ready": "Ready",
+        "analysis_label": "Analysis",
+        "analysis_realtime": "Real-time"
+      }
+    }
+  },
+  "footer": {
+    "quick_links": "Quick Links",
+    "ai_tools": "AI Tools",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "sdg2": "SDG 2 - Zero Hunger",
+    "copy": "© 2024 AgriFarmAI. All Rights Reserved.",
+    "copy_medical": "© 2024 MedicalAI. All Rights Reserved.",
+    "brand_desc": "Revolutionizing agriculture with AI-powered insights for soil health, crop monitoring, and sustainable farming practices."
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "nav": {
+    "home": "होम",
+    "about": "परिचय",
+    "analysis": "विश्लेषण",
+    "insights": "अंतर्दृष्टि",
+    "ai_analytics": "एआई एनालिटिक्स",
+    "contact": "संपर्क"
+  },
+  "common": {
+    "back_home": "होम पर वापस",
+    "back_dashboard": "डैशबोर्ड पर वापस",
+    "back_farming_tool": "फार्मिंग टूल पर वापस",
+    "send_message": "संदेश भेजें",
+    "upload_report": "रिपोर्ट अपलोड करें",
+    "processing": "प्रोसेस हो रहा है...",
+    "voice_input": "वॉयस इनपुट",
+    "stop_voice": "वॉयस रोकें",
+    "analyzing": "विश्लेषण हो रहा है...",
+    "analyze": "विश्लेषण करें",
+    "logout": "लॉग आउट",
+    "launch": "लॉन्च",
+    "recent_readings": "हाल की रीडिंग",
+    "camera_scan": "कैमरा स्कैन",
+    "analyze_data": "डाटा विश्लेषण",
+    "listening": "सुन रहे हैं...",
+    "listening_prompt": "सुन रहे हैं... अब बोलें",
+    "document_uploaded": "दस्तावेज़ अपलोड हुआ:",
+    "processing_document": "एआई दस्तावेज़ प्रोसेस कर रहा है...",
+    "extracting_field_data": "फील्ड डाटा निकाला जा रहा है",
+    "select_gender": "लिंग चुनें",
+    "male": "पुरुष",
+    "female": "महिला",
+    "other": "अन्य",
+    "select_duration": "अवधि चुनें",
+    "select_severity": "गंभीरता चुनें"
+  },
+  "hero": {
+    "title1": "स्मार्ट खेती",
+    "title2": "समाधान",
+    "tagline": "कृषि और बाज़ार की जानकारी के लिए उन्नत एआई समाधान — अत्याधुनिक तकनीक के साथ खेती और चिकित्सा निदान में क्रांति।",
+    "cta_farming_ai": "फार्मिंग एआई",
+    "cta_learn_more": "और जानें"
+  },
+  "features": {
+    "crop_disease": "फसल रोग",
+    "detection": "पता लगाना",
+    "ai_powered": "एआई संचालित",
+    "insights": "अंतर्दृष्टि",
+    "yield": "उत्पादन",
+    "optimization": "अनुकूलन",
+    "smart": "स्मार्ट",
+    "automation": "स्वचालन"
+  },
+  "weather": {
+    "humidity": "नमी",
+    "wind": "पवन",
+    "precipitation": "वर्षा",
+    "yield": "उत्पादन"
+  },
+  "pages": {
+    "about": {
+      "title1": "अबाउट",
+      "title2": "AgriFARMAI",
+      "subtitle": "किसानों के रोग निदान और रिपोर्टिंग के लिए एआई-संचालित मोबाइल पोर्टल, एसडीजी 2: शून्य भूख में योगदान।",
+      "expected_outcomes": "अपेक्षित परिणाम और SDG 2 प्रभाव",
+      "disease_management": "रोग प्रबंधन",
+      "food_security_impact": "खाद्य सुरक्षा प्रभाव",
+      "ai_integration": "एआई एकीकरण और सामुदायिक प्रभाव",
+      "ai_technology": "एआई तकनीक",
+      "community_benefits": "समुदाय लाभ"
+    },
+    "ai_analytics": {
+      "title1": "एआई",
+      "title2": "एनालिटिक्स",
+      "subtitle": "बुद्धिमान खेती निर्णयों के लिए उन्नत मशीन लर्निंग एल्गोरिद्म।",
+      "capabilities": "एआई क्षमताएं"
+    },
+    "analysis": {
+      "title1": "फार्म",
+      "title2": "विश्लेषण",
+      "subtitle": "इष्टतम खेती निर्णयों के लिए व्यापक मिट्टी, फसल और पर्यावरण विश्लेषण।",
+      "actionable_insights": "कार्यान्वयन योग्य अंतर्दृष्टि"
+    },
+    "contact": {
+      "title1": "संपर्क",
+      "title2": "करें",
+      "subtitle": "क्या आप अपनी खेती में बदलाव के लिए तैयार हैं? आज ही हमारी टीम से संपर्क करें।",
+      "our_location": "हमारा स्थान",
+      "email_us": "ईमेल करें",
+      "call_us": "कॉल करें",
+      "send_us_message": "हमें संदेश भेजें",
+      "full_name": "पूरा नाम",
+      "email_address": "ईमेल पता",
+      "subject": "विषय",
+                "message": "संदेश",
+                "subject_options": {
+                  "general": "सामान्य पूछताछ",
+                  "demo": "डेमो का अनुरोध",
+                  "support": "तकनीकी सहायता",
+                  "partnership": "साझेदारी",
+                  "pricing": "मूल्य जानकारी"
+                },
+                "placeholders": {
+        "name": "राहुल वर्मा",
+        "email": "rahul@example.com",
+        "message": "हमें बताएं कि हम आपकी किस प्रकार मदद कर सकते हैं..."
+      }
+    },
+    "crop_health": {
+      "title1": "फसल",
+      "title2": "स्वास्थ्य",
+      "subtitle": "एआई-संचालित फसल रोग पहचान और स्वास्थ्य निगरानी प्रणाली।",
+      "assessment": "फसल स्वास्थ्य मूल्यांकन",
+      "fields": {
+        "crop_type": "फसल का प्रकार",
+        "variety": "फसल की किस्म",
+        "planting_date": "रोपण तिथि",
+        "growth_stage": "विकास चरण",
+        "field_size": "खेत का आकार (एकड़)",
+        "irrigation_method": "सिंचाई विधि",
+        "fertilizer": "उर्वरक उपयोग",
+        "pesticide": "कीटनाशक उपयोग",
+        "location": "स्थान",
+        "symptoms": "देखे गए लक्षण",
+        "weather": "मौसम की स्थिति",
+        "ph_crop_type": "जैसे गेहूं, धान, टमाटर",
+        "ph_variety": "जैसे बासमती, IR64, चेरी",
+        "ph_field_size": "5",
+        "ph_location": "शहर, राज्य",
+        "ph_symptoms": "लक्षण लिखें...",
+        "ph_weather": "वर्षा, तापमान...",
+        "select_stage": "चरण चुनें",
+        "select_method": "विधि चुनें"
+      },
+            "buttons": {
+              "analyze": "डाटा विश्लेषण"
+            },
+            "stages": {
+              "seedling": "अंकुर",
+              "vegetative": "वनस्पतिक",
+              "flowering": "पुष्पन",
+              "fruiting": "फलन",
+              "maturity": "परिपक्वता"
+            },
+            "irrigation": {
+              "drip": "ड्रिप सिंचाई",
+              "sprinkler": "स्प्रिंकलर",
+              "flood": "फ्लड सिंचाई",
+              "rainfed": "वर्षा पर निर्भर"
+            },
+            "cards": {
+        "ai_diagnosis": "एआई फसल निदान",
+        "crop_status": "फसल स्थिति",
+        "health_score": "स्वास्थ्य स्कोर",
+        "growth_stage": "विकास चरण",
+        "yield_prediction": "उपज पूर्वानुमान",
+        "expected_yield": "अपेक्षित उपज:",
+        "quality": "गुणवत्ता:",
+        "factors": "कारक:",
+        "detected_diseases": "पता चले रोग",
+        "symptoms": "लक्षण:",
+        "treatment": "उपचार:",
+        "cost": "लागत:",
+        "nutrition_deficiencies": "पोषण की कमी",
+        "solution": "समाधान:",
+        "dosage": "मात्रा:",
+        "fertilizer_recommendations": "उर्वरक सिफारिशें",
+        "purpose": "उद्देश्य",
+        "quantity": "मात्रा:",
+        "timing": "समय:",
+        "action_plan": "कार्य योजना",
+        "immediate_actions": "तुरंत करने योग्य",
+        "weekly_actions": "साप्ताहिक कार्य",
+        "monthly_actions": "मासिक कार्य",
+        "cost_benefit": "लागत-लाभ विश्लेषण",
+        "total_care_cost": "कुल देखभाल लागत",
+        "expected_revenue": "अपेक्षित राजस्व",
+        "profit_margin": "लाभ मार्जिन"
+      }
+    },
+    "insights": {
+      "title1": "स्मार्ट",
+      "title2": "अंतर्दृष्टि",
+      "subtitle": "खेती में सफलता अधिकतम करने के लिए कार्रवाई योग्य बुद्धिमत्ता और बाज़ार अंतर्दृष्टि।",
+      "active_alerts": "सक्रिय चेतावनियाँ",
+      "market_intelligence": "बाज़ार इंटेलिजेंस",
+      "ai_recommendations": "एआई सिफारिशें",
+      "investment_returns": "निवेश रिटर्न",
+      "this_week": "इस सप्ताह",
+      "next_month": "अगले महीने"
+    },
+    "login": {
+      "back_home": "होम पर वापस",
+      "welcome_back": "वापसी पर स्वागत है",
+      "join": "MedicalAI से जुड़ें",
+      "access_dashboard": "अपना मेडिकल एआई डैशबोर्ड एक्सेस करें",
+      "create_account_subtitle": "अपना मेडिकल प्रोफेशनल अकाउंट बनाएँ",
+      "sign_in": "साइन इन",
+      "create_account": "अकाउंट बनाएँ",
+      "switch_to_signup": "अकाउंट नहीं है? साइन अप करें",
+      "switch_to_login": "पहले से अकाउंट है? साइन इन करें",
+      "demo_mode": "डेमो मोड:",
+      "demo_text": "सिस्टम उपयोग के लिए कोई भी ईमेल और पासवर्ड इस्तेमाल करें",
+      "full_name": "पूरा नाम",
+      "email": "ईमेल पता",
+      "password": "पासवर्ड"
+    },
+    "medical_analytics": {
+      "title1": "मेडिकल",
+      "title2": "एनालिटिक्स",
+      "subtitle": "डेटा-आधारित चिकित्सा निर्णयों के लिए उन्नत स्वास्थ्य विश्लेषण और जनसंख्या अंतर्दृष्टि।",
+      "back_dashboard": "डैशबोर्ड पर वापस"
+    },
+    "medical_dashboard": {
+      "title1": "मेडिकल एआई",
+      "title2": "डैशबोर्ड",
+      "subtitle": "स्वास्थ्य-सेवा पेशेवरों के लिए उन्नत एआई-संचालित चिकित्सा विश्लेषण उपकरण।",
+      "logout": "लॉग आउट",
+      "launch": "लॉन्च"
+    },
+    "medical_diagnosis": {
+      "title1": "एआई",
+      "title2": "डायग्नोसिस",
+      "subtitle": "व्यापक चिकित्सा अंतर्दृष्टि और उपचार सिफारिशों के साथ उन्नत लक्षण विश्लेषण।",
+      "symptom_analysis": "लक्षण विश्लेषण",
+      "analyze_symptoms": "लक्षणों का विश्लेषण करें",
+      "fields": {
+        "age": "आयु",
+        "gender": "लिंग",
+        "describe_symptoms": "अपने लक्षण बताएं",
+        "question_feeling": "आप कैसा महसूस कर रहे हैं?",
+        "pain_description": "दर्द का वर्णन",
+        "pain_location": "दर्द का स्थान और प्रकार",
+        "additional_symptoms": "अतिरिक्त लक्षण",
+        "duration": "अवधि",
+        "severity": "गंभीरता",
+        "medical_history": "चिकित्सा इतिहास (वैकल्पिक)",
+        "past_diseases": "पूर्व रोग/सर्जरी",
+        "known_allergies": "ज्ञात एलर्जी",
+        "family_history": "परिवार का चिकित्सा इतिहास",
+        "ph_pain_desc": "तेज, हल्का, धड़कता...",
+        "ph_pain_loc": "सिर, छाती, पेट...",
+        "ph_symptoms": "अपने लक्षण विस्तार से लिखें..."
+      },
+          "symptoms": {
+"fever_chills": "बुखार/कंपकंपी",
+            "fatigue": "थकान"
+          },
+          "options": {
+            "duration": {
+              "lt1d": "1 दिन से कम",
+              "1to3d": "1-3 दिन",
+              "4to7d": "4-7 दिन",
+              "1to2w": "1-2 सप्ताह",
+              "gt2w": "2 सप्ताह से अधिक"
+            },
+            "severity": {
+              "mild": "हल्का (1-3)",
+              "moderate": "मध्यम (4-6)",
+              "severe": "गंभीर (7-8)",
+              "very_severe": "अत्यंत गंभीर (9-10)"
+            }
+          }
+        },
+    "medical_predictor": {
+      "title1": "स्वास्थ्य",
+      "title2": "प्रेडिक्टर",
+      "subtitle": "प्रोएक्टिव हेल्थकेयर के लिए एआई-संचालित स्वास्थ्य परिणाम भविष्यवाणियाँ और जोखिम आकलन।",
+      "patient_information": "रोगी जानकारी",
+      "fields": {
+        "age": "आयु",
+        "gender": "लिंग",
+        "medical_history": "चिकित्सा इतिहास",
+        "symptoms": "वर्तमान लक्षण",
+        "lifestyle": "जीवन शैली",
+        "family_history": "परिवार का इतिहास"
+      }
+    },
+    "medical_vitals": {
+      "title1": "वाइटल्स",
+      "title2": "मॉनिटर",
+      "subtitle": "एआई-संचालित विश्लेषण और स्वास्थ्य अंतर्दृष्टि के साथ वास्तविक समय वाइटल मॉनिटरिंग।",
+      "enter_vital_signs": "वाइटल साइन दर्ज करें",
+      "ai_analysis": "एआई विश्लेषण",
+      "enter_vitals_cta": "एआई विश्लेषण पाने के लिए वाइटल दर्ज करें",
+      "analyze_vitals": "वाइटल का विश्लेषण करें",
+      "fields": {
+        "blood_pressure": "रक्तचाप",
+        "heart_rate": "हृदय गति (बीपीएम)",
+        "temperature": "तापमान (°F)",
+        "oxygen_saturation": "ऑक्सीजन संतृप्ति (%)",
+        "respiratory_rate": "श्वसन दर (श्वास/मिनट)"
+      }
+    },
+    "monitoring": {
+      "title1": "आईओटी",
+      "title2": "मॉनिटरिंग",
+      "subtitle": "स्मार्ट सिंचाई और फार्म अनुकूलन के लिए रीयल-टाइम सेंसर डेटा विश्लेषण।",
+      "iot_sensor_data": "IoT सेंसर डेटा",
+      "fields": {
+        "soil_moisture": "मिट्टी की नमी (%)",
+        "air_temperature": "वायु तापमान (°C)",
+        "humidity": "नमी (%)",
+        "light_intensity": "प्रकाश तीव्रता (लक्स)",
+        "rainfall": "हालिया वर्षा (मिमी)"
+      },
+      "buttons": {
+        "analyze": "मॉनिटरिंग विश्लेषण"
+      }
+    },
+    "soil_analysis": {
+      "title1": "मृदा",
+      "title2": "विश्लेषण",
+      "subtitle": "व्यापक पोषक तत्व विश्लेषण के साथ एआई-संचालित मृदा स्वास्थ्य मूल्यांकन।",
+      "soil_testing_data": "मृदा परीक्षण डेटा"
+    },
+    "farming_tool": {
+      "title1": "एआई फार्मिंग",
+      "title2": "मॉड्यूल",
+      "subtitle": "उत्पादकता और स्थिरता को अनुकूलित करने के लिए अपना एआई-संचालित फार्मिंग टूल चुनें।",
+      "our_contribution": "हमारा योगदान",
+      "modules": {
+        "crop": {
+          "title": "फसल स्वास्थ्य",
+          "desc": "रोग पहचान, कीट पहचान और उपचार सिफारिशें"
+        },
+        "soil": {
+          "title": "मृदा विश्लेषण",
+          "desc": "एनपीके विश्लेषण और फसल सिफारिशों के साथ एआई-संचालित मृदा स्वास्थ्य मूल्यांकन"
+        },
+        "monitoring": {
+          "title": "IoT मॉनिटरिंग",
+          "desc": "रीयल-टाइम सेंसर डाटा विश्लेषण और सिंचाई अनुकूलन"
+        },
+        "market": {
+          "title": "बाज़ार इंटेलिजेंस",
+          "desc": "बाज़ार विश्लेषण, मूल्य रुझान और लाभप्रदता अंतर्दृष्टि"
+        }
+      },
+      "card": {
+        "status_label": "स्थिति",
+        "ready": "तैयार",
+        "analysis_label": "विश्लेषण",
+        "analysis_realtime": "रीयल-टाइम"
+      }
+    }
+  },
+  "footer": {
+    "quick_links": "त्वरित लिंक",
+    "ai_tools": "एआई उपकरण",
+    "privacy": "गोपनीयता नीति",
+    "terms": "सेवा की शर्तें",
+    "sdg2": "SDG 2 - शून्य भूख",
+    "copy": "© 2024 AgriFarmAI. सर्वाधिकार सुरक्षित।",
+    "copy_medical": "© 2024 MedicalAI. सर्वाधिकार सुरक्षित।",
+    "brand_desc": "मिट्टी के स्वास्थ्य, फसल निगरानी और टिकाऊ खेती के लिए एआई-संचालित अंतर्दृष्टि के साथ कृषि में क्रांति।"
+  }
+}
