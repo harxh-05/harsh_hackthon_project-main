@@ -422,7 +422,14 @@ const Monitoring = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
+              <button
+                onClick={() => navigate('/iot-dashboard')}
+                className="flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-600 text-white py-4 rounded-lg transition-all duration-300 font-semibold"
+              >
+                <Satellite className="w-5 h-5" />
+                <span>IoT Monitoring</span>
+              </button>
               <button
                 onClick={() => fileInputRef.current?.click()}
                 disabled={isAnalyzing || isProcessingDoc || isListening}
