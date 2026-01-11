@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { AuthProvider } from './context/AuthContext';
 import { initDevToolsBlocker } from './utils/devToolsBlocker';
 import SystemHealthMonitor from './components/SystemHealthMonitor';
+import APISetupGuide from './components/APISetupGuide';
 import Home from './pages/Home';
 import About from './pages/About';
 import AIAnalytics from './pages/AIAnalytics';
@@ -59,6 +60,7 @@ function App() {
           <Route path="/medical-analytics" element={<ProtectedRoute><MedicalAnalytics /></ProtectedRoute>} />
         </Routes>
         <SystemHealthMonitor />
+        <APISetupGuide />
       </Router>
     </AuthProvider>
   );
