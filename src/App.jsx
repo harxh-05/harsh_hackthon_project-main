@@ -19,6 +19,8 @@ const CropHealth = lazy(() => import('./pages/CropHealth'));
 const MarketIntel = lazy(() => import('./pages/MarketIntel'));
 const Monitoring = lazy(() => import('./pages/Monitoring'));
 const AIAnalytics = lazy(() => import('./pages/AIAnalytics'));
+const IoTDashboard = lazy(() => import('./pages/IoTDashboard'));
+const AutomationDashboard = lazy(() => import('./pages/AutomationDashboard'));
 const MedicalDashboard = lazy(() => import('./pages/MedicalDashboard'));
 const MedicalDiagnosis = lazy(() => import('./pages/MedicalDiagnosis'));
 const MedicalVitals = lazy(() => import('./pages/MedicalVitals'));
@@ -59,6 +61,8 @@ function App() {
             <Route path="/geo-soil-analysis" element={<GeoSoilAnalysis />} />
             <Route path="/crop-health" element={<CropHealth />} />
             <Route path="/monitoring" element={<Monitoring />} />
+            <Route path="/iot-dashboard" element={<IoTDashboard />} />
+            <Route path="/automation" element={<AutomationDashboard />} />
             <Route path="/market-intel" element={<MarketIntel />} />
             <Route path="/medical-dashboard" element={<ProtectedRoute><MedicalDashboard /></ProtectedRoute>} />
             <Route path="/medical-diagnosis" element={<ProtectedRoute><MedicalDiagnosis /></ProtectedRoute>} />

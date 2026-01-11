@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Leaf, ArrowRight, Cloud, Droplet, Wind, Thermometer, TrendingUp, Cpu, Wrench, Menu, X, ArrowUpRight, Stethoscope } from 'lucide-react';
+import { Leaf, ArrowRight, Cloud, Droplet, Wind, Thermometer, TrendingUp, Cpu, Wrench, Menu, X, ArrowUpRight, Stethoscope, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 
@@ -84,6 +84,7 @@ const Home = () => {
               <button onClick={() => navigate('/analysis')} className="hover:text-green-300 transition-colors duration-300 text-sm lg:text-base font-medium">{t('nav.analysis')}</button>
               <button onClick={() => navigate('/insights')} className="hover:text-green-300 transition-colors duration-300 text-sm lg:text-base font-medium">{t('nav.insights')}</button>
               <button onClick={() => navigate('/ai-analytics')} className="hover:text-green-300 transition-colors duration-300 text-sm lg:text-base font-medium">{t('nav.ai_analytics')}</button>
+              <button onClick={() => navigate('/automation')} className="hover:text-green-300 transition-colors duration-300 text-sm lg:text-base font-medium">Automation</button>
             </div>
           </div>
           
@@ -125,6 +126,7 @@ const Home = () => {
           <button onClick={() => { navigate('/analysis'); setIsMobileMenuOpen(false); }} className="text-3xl font-bold text-gray-300 hover:text-green-300">{t('nav.analysis')}</button>
           <button onClick={() => { navigate('/insights'); setIsMobileMenuOpen(false); }} className="text-3xl font-bold text-gray-300 hover:text-green-300">{t('nav.insights')}</button>
           <button onClick={() => { navigate('/ai-analytics'); setIsMobileMenuOpen(false); }} className="text-3xl font-bold text-gray-300 hover:text-green-300">{t('nav.ai_analytics')}</button>
+          <button onClick={() => { navigate('/automation'); setIsMobileMenuOpen(false); }} className="text-3xl font-bold text-gray-300 hover:text-green-300">Automation</button>
           <button onClick={() => { navigate('/contact'); setIsMobileMenuOpen(false); }} className="mt-8 bg-green-500 px-8 py-3 rounded-full font-bold text-xl">{t('nav.contact')}</button>
         </div>
       </div>
