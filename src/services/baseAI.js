@@ -1,6 +1,7 @@
+import { LRUCache } from '../utils/performance.js';
+
 export class BaseAI {
-  static cache = new Map();
-  static cacheMaxSize = 1000;
+  static cache = new LRUCache(500);
   static cacheTTL = 300000; // 5 minutes
   
   static getMockResponse(prompt, systemPrompt) {
@@ -70,19 +71,10 @@ export class BaseAI {
     if (cached && Date.now() - cached.timestamp < this.cacheTTL) {
       return cached.data;
     }
-    if (cached) {
-      this.cache.delete(cacheKey);
-    }
     return null;
   }
 
   static setCachedResult(cacheKey, data) {
-    // Implement LRU eviction
-    if (this.cache.size >= this.cacheMaxSize) {
-      const firstKey = this.cache.keys().next().value;
-      this.cache.delete(firstKey);
-    }
-    
     this.cache.set(cacheKey, {
       data,
       timestamp: Date.now()

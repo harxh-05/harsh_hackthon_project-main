@@ -24,7 +24,8 @@ export default defineConfig({
           'vendor-react': ['react', 'react-dom'],
           'vendor-router': ['react-router-dom'],
           'vendor-ui': ['lucide-react'],
-          'vendor-i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector']
+          'vendor-i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+          'ai-services': ['./src/services/baseAI.js', './src/services/huggingFaceService.js']
         }
       }
     },
