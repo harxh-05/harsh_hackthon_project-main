@@ -1,10 +1,15 @@
+import { apiLoadBalancer } from './loadBalancer.js';
+import { connectionPool } from './connectionPool.js';
+
 export class BaseAI {
+  static cache = new Map();
+  
   static sanitizeInput(input) {
     if (typeof input !== 'string') return '';
     return input.replace(/<script[^>]*>.*?<\/script>/gi, '')
                 .replace(/<[^>]*>/g, '')
                 .trim()
-                .substring(0, 10000); // Limit input length
+                .substring(0, 10000);
   }
 
   static async callAPI(prompt, systemPrompt = '') {
@@ -14,7 +19,6 @@ export class BaseAI {
       throw new Error('OpenRouter API key not found');
     }
 
-    // Sanitize inputs
     const sanitizedPrompt = this.sanitizeInput(prompt);
     const sanitizedSystemPrompt = this.sanitizeInput(systemPrompt);
 
@@ -22,37 +26,61 @@ export class BaseAI {
       throw new Error('Invalid or empty prompt provided');
     }
 
+    // Check cache first
+    const cacheKey = btoa(sanitizedPrompt + sanitizedSystemPrompt).substring(0, 50);
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+
+    const messages = [
+      ...(sanitizedSystemPrompt ? [{ role: "system", content: sanitizedSystemPrompt }] : []),
+      { role: "user", content: sanitizedPrompt }
+    ];
+
+    // Use connection pool + load balancer
+    await connectionPool.acquire();
+    
+    const requestFn = async (endpoint) => {
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${API_KEY}`,
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest',
+          },
+          body: JSON.stringify({
+            model: "nvidia/nemotron-nano-9b-v2:free",
+            messages: messages,
+            max_tokens: 3000,
+            temperature: 0.2
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`API call failed: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const content = data.choices[0]?.message?.content;
+        if (!content) {
+          throw new Error('Empty response from AI model');
+        }
+        
+        connectionPool.recordSuccess();
+        return content;
+      } catch (error) {
+        connectionPool.recordFailure();
+        throw error;
+      } finally {
+        connectionPool.release();
+      }
+    };
+
     try {
-      const messages = [
-        ...(sanitizedSystemPrompt ? [{ role: "system", content: sanitizedSystemPrompt }] : []),
-        { role: "user", content: sanitizedPrompt }
-      ];
-
-      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${API_KEY}`,
-          'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest', // CSRF protection
-        },
-        body: JSON.stringify({
-          model: "nvidia/nemotron-nano-9b-v2:free",
-          messages: messages,
-          max_tokens: 3000,
-          temperature: 0.2
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`);
-      }
-
-      const data = await response.json();
-      const content = data.choices[0]?.message?.content;
-      if (!content) {
-        throw new Error('Empty response from AI model');
-      }
-      return content;
+      const result = await apiLoadBalancer.queueRequest(requestFn);
+      this.cache.set(cacheKey, result);
+      return result;
     } catch (error) {
       console.error('BaseAI API Error:', error);
       throw error;

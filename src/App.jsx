@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { AuthProvider } from './context/AuthContext';
 import { initDevToolsBlocker } from './utils/devToolsBlocker';
+import SystemHealthMonitor from './components/SystemHealthMonitor';
 import Home from './pages/Home';
 import About from './pages/About';
 import AIAnalytics from './pages/AIAnalytics';
@@ -57,7 +58,7 @@ function App() {
           <Route path="/medical-predictor" element={<ProtectedRoute><MedicalPredictor /></ProtectedRoute>} />
           <Route path="/medical-analytics" element={<ProtectedRoute><MedicalAnalytics /></ProtectedRoute>} />
         </Routes>
-
+        <SystemHealthMonitor />
       </Router>
     </AuthProvider>
   );
