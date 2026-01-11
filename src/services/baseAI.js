@@ -1,8 +1,11 @@
 import { apiLoadBalancer } from './loadBalancer.js';
 import { connectionPool } from './connectionPool.js';
+import { requestThrottler } from './requestThrottler.js';
 
 export class BaseAI {
   static cache = new Map();
+  static cacheMaxSize = 1000;
+  static cacheTTL = 300000; // 5 minutes
   
   static sanitizeInput(input) {
     if (typeof input !== 'string') return '';
@@ -12,7 +15,36 @@ export class BaseAI {
                 .substring(0, 10000);
   }
 
-  static async callAPI(prompt, systemPrompt = '') {
+  // Enhanced cache with TTL and size limits
+  static getCacheKey(prompt, systemPrompt) {
+    return btoa(prompt + systemPrompt).substring(0, 50);
+  }
+
+  static getCachedResult(cacheKey) {
+    const cached = this.cache.get(cacheKey);
+    if (cached && Date.now() - cached.timestamp < this.cacheTTL) {
+      return cached.data;
+    }
+    if (cached) {
+      this.cache.delete(cacheKey);
+    }
+    return null;
+  }
+
+  static setCachedResult(cacheKey, data) {
+    // Implement LRU eviction
+    if (this.cache.size >= this.cacheMaxSize) {
+      const firstKey = this.cache.keys().next().value;
+      this.cache.delete(firstKey);
+    }
+    
+    this.cache.set(cacheKey, {
+      data,
+      timestamp: Date.now()
+    });
+  }
+
+  static async callAPI(prompt, systemPrompt = '', priority = 'normal') {
     const API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
     
     if (!API_KEY) {
@@ -27,9 +59,10 @@ export class BaseAI {
     }
 
     // Check cache first
-    const cacheKey = btoa(sanitizedPrompt + sanitizedSystemPrompt).substring(0, 50);
-    if (this.cache.has(cacheKey)) {
-      return this.cache.get(cacheKey);
+    const cacheKey = this.getCacheKey(sanitizedPrompt, sanitizedSystemPrompt);
+    const cachedResult = this.getCachedResult(cacheKey);
+    if (cachedResult) {
+      return cachedResult;
     }
 
     const messages = [
@@ -37,49 +70,51 @@ export class BaseAI {
       { role: "user", content: sanitizedPrompt }
     ];
 
-    // Use connection pool + load balancer
+    // Use connection pool + load balancer + throttling
     await connectionPool.acquire();
     
     const requestFn = async (endpoint) => {
-      try {
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${API_KEY}`,
-            'Content-Type': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest',
-          },
-          body: JSON.stringify({
-            model: "nvidia/nemotron-nano-9b-v2:free",
-            messages: messages,
-            max_tokens: 3000,
-            temperature: 0.2
-          })
-        });
+      return await requestThrottler.throttleRequest(endpoint, async () => {
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${API_KEY}`,
+              'Content-Type': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest',
+            },
+            body: JSON.stringify({
+              model: "nvidia/nemotron-nano-9b-v2:free",
+              messages: messages,
+              max_tokens: 3000,
+              temperature: 0.2
+            })
+          });
 
-        if (!response.ok) {
-          throw new Error(`API call failed: ${response.status}`);
-        }
+          if (!response.ok) {
+            throw new Error(`API call failed: ${response.status}`);
+          }
 
-        const data = await response.json();
-        const content = data.choices[0]?.message?.content;
-        if (!content) {
-          throw new Error('Empty response from AI model');
+          const data = await response.json();
+          const content = data.choices[0]?.message?.content;
+          if (!content) {
+            throw new Error('Empty response from AI model');
+          }
+          
+          connectionPool.recordSuccess();
+          return content;
+        } catch (error) {
+          connectionPool.recordFailure();
+          throw error;
+        } finally {
+          connectionPool.release();
         }
-        
-        connectionPool.recordSuccess();
-        return content;
-      } catch (error) {
-        connectionPool.recordFailure();
-        throw error;
-      } finally {
-        connectionPool.release();
-      }
+      });
     };
 
     try {
-      const result = await apiLoadBalancer.queueRequest(requestFn);
-      this.cache.set(cacheKey, result);
+      const result = await apiLoadBalancer.queueRequest(requestFn, priority);
+      this.setCachedResult(cacheKey, result);
       return result;
     } catch (error) {
       console.error('BaseAI API Error:', error);
